@@ -3,7 +3,8 @@ const https = require("https");
 // Bot configs read in from environment
 const room_id = process.env.HUBOT_GROUPME_ROOM_ID;
 const bot_id = process.env.HUBOT_GROUPME_BOT_ID;
-const token = process.env.HUBOT_GROUPME_TOKEN;
+const token = "D7DR1lBXpn9upEpZ81chABBj3Pu9vHlLtXA9gOCl";
+      //process.env.HUBOT_GROUPME_TOKEN;
 
 if (!room_id || !bot_id || !token) {
   console.error(
