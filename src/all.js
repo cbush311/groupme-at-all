@@ -147,6 +147,14 @@ class AllBot {
       bot_id,
       attachments: [{ loci: [], type: "mentions", user_ids: [] }]
     };
+    
+    sendInfo() {
+      const text = "New Feature: Fire Sale – temporarily discounts items in the buy station up to 80% or gives one item completely free. If team’s in-game funds are low, fallen teammates redeploy for free. \nNew Feature: Jailbreak – all eliminated players are given a second chance and released back into the match, regardless if they are spectators or waiting in the Gulag. \nNew Feature: Supply Chopper – non-lethal choppers with high quality gear fly around the map for players to bring down \nNew Feature: Contraband Contract – Whenever a contract is completed there’s a small chance that a Contraband Contract is dropped. Collect this case and bring it to the designated helicopter extraction zone to unlock the Blueprint weapon for you and your team in your loadouts!";
+      const message = {
+      text,
+      bot_id,
+      attachments: [{ loci: [], type: "mentions", user_ids: [] }]
+    };
 
     // Add "mention" for each user
     const users = this.robot.brain.users();
@@ -202,6 +210,9 @@ class AllBot {
 
     // Mention @all command
     this.robot.hear(/(.*)@all(.*)/i, res => this.respondToAtAll(res));
+    
+    //Repeat Warzone Season 4 info
+    this.robot.hear(/(.*)#Season4(.*)/i, res => this.sendInfo());
   }
 }
 
