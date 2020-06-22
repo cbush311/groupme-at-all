@@ -192,10 +192,10 @@ class AllBot {
     );
     /*this.robot.hear(/view( raw)* blacklist/i, res =>
       this.respondToViewBlacklist(res)
-    );*/
+    );
     this.robot.hear(/blacklist (.+)/i, res =>
       this.respondToBlacklist(res, res.match[1])
-    );
+    );*/
     this.robot.hear(/whitelist (.+)/i, res =>
       this.respondToWhitelist(res, res.match[1])
     );
